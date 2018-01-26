@@ -30,6 +30,7 @@ include:
   - mode: "{{ type['createmode'] }}"
   - user: {{ type['owner'] }}
   - group: {{ type['group'] }}
+  - replace: False
   - watch:
     - file: /etc/rsyslog.conf
   - watch_in:
