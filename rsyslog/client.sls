@@ -28,7 +28,7 @@ include:
 {{ output }}:
   file.managed:
   - mode: "{{ type['createmode'] }}"
-  - owner: {{ type['owner'] }}
+  - user: {{ type['owner'] }}
   - group: {{ type['group'] }}
   - watch:
     - file: /etc/rsyslog.conf
