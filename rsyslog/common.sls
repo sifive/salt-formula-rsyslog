@@ -2,7 +2,7 @@
 
 rsyslog_packages:
   pkg.latest:
-  - names: {{ global.pkgs }}
+  - names: {{ global.pkgs|yaml }}
 
 rsyslog_service:
   service.running:
