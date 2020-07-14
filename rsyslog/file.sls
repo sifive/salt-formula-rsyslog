@@ -7,7 +7,7 @@ include:
 
 {%- for name, config in file.iteritems() -%}
 
-rsyslog_files_{{ name }}
+rsyslog_files_{{ name }}:
   file.managed:
     - name: {{ global.rsyslog_d }}/{{ name }}.conf
     - source: salt://rsyslog/files/file.conf
