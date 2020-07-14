@@ -9,7 +9,7 @@ include:
 
 rsyslog_files_{{ name }}
   file.managed:
-  - name: {{ global.rsyslogd }}/{{ name }}.conf
+  - name: {{ global.rsyslog_d }}/{{ name }}.conf
   - source: salt://rsyslog/files/file.conf
   - template: jinja
   - mode: 0640
