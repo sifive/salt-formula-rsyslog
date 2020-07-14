@@ -8,3 +8,6 @@ include:
 {%- endif %}
 {%- endif %}
 
+{%- if pillar.rsyslog.file is defined %}
+- rsyslog.file
+{%- endif %}
