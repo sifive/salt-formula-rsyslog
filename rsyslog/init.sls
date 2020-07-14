@@ -9,7 +9,7 @@ include:
 - rsyslog.client
 {%- endif %}
 
-{%- if pillar.rsyslog.file is defined %}
+{%- if pillar.rsyslog.conf is defined %}
 - rsyslog.file
 {%- endif %}
 

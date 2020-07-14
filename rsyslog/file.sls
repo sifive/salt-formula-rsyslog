@@ -1,6 +1,6 @@
 {%- from "rsyslog/map.jinja" import global with context %}
 
-{%- set file = salt['pillar.get']('rsyslog:file', {}) %}
+{%- set file = salt['pillar.get']('rsyslog:conf', {}) %}
 
 include:
 - rsyslog.common
