@@ -1,4 +1,4 @@
-{%- from "rsyslog/map.jinja" import server with context %}
+{%- from "rsyslog/map.jinja" import global with context %}
 
 {%- set file = salt['pillar.get']('rsyslog:file', {}) %}
 
@@ -9,7 +9,7 @@ include:
 
 rsyslog_files_{{ name }}
   file.managed:
-  - name: /etc/rsyslog.d/{{ name }}.conf
+  - name: {{ global.rsyslogd }}/{{ name }}.conf
   - source: salt://rsyslog/files/file.conf
   - template: jinja
   - mode: 0640
