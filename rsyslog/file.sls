@@ -5,7 +5,7 @@
 include:
 - rsyslog.common
 
-{% for name, config in file.iteritems() -%}
+{% for name, config in file.items() -%}
 
 rsyslog_files_{{ name }}:
   file.managed:
