@@ -24,7 +24,7 @@ include:
     - service: rsyslog_service
 
 {% if global.manage_file_perms is defined and global.manage_file_perms == true %}
-{% for output,type in global.output.file.iteritems() %}
+{% for output,type in global.output.file.items() %}
 {{ output }}:
   file.managed:
   - mode: "{{ type['createmode'] }}"
